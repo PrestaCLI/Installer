@@ -1,12 +1,16 @@
 #!/bin/bash
 
-# File : marinetti.sh
+# File : tools.sh
 # Author : Michaël Marinetti
-# Description : Bibliothèque de fonction de bases pour simplifier les scripts et afficher les options de bases
-# Creation : 2010/04/01
-# Last Mod : 2011/05/04
+# Description : Bibliothèque de fonction basiques pour simplifier les scripts et afficher les options de bases
+# Creation : 2010-04-01
+# Last Mod : 2012-02-01
+#
+# CHANGELOG
+# 2012-02-01
+# description, namings, ...
 
-VERSION_LIB="0.0.2"
+VERSION_LIB="0.0.3"
 ###############################################
 if(test "$DATE" = "") then 
 	echo "La variable \$DATE n'a pas ete cree."
@@ -55,12 +59,12 @@ logerror () {
 	#fi
 }
 
-marinetti_info(){
+showinfo(){
 	echo $INFOS
 }
 
-marinetti_help(){
-	marinetti_info
+showhelp(){
+	showinfo
 	echo ""
 	echo "Options disponibles"
 	echo "--display-logfile    Afficher les logs d'erreur a la fin"
